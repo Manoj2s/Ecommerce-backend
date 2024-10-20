@@ -17,6 +17,10 @@ const PORT = process.env.PORT;
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get("/",(req,res)=>{
+  res.send("Route is working properly");
+})
+
 app.use("/auth", AuthRouter);
 app.use("/", productRoutes);
 app.use("/", detailRoutes);
